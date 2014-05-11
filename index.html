@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IE Sweeper</title>
+		<meta charset="utf-8">
+				
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400|Orbitron:400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>	
+		<script type="text/javascript" src="js/game.js"></script>
+	</head>
+	<body>
+		<h1>IE Sweeper</h1>
+
+		<div class="grid display">
+			<div id="timer" class="timer">000</div>
+			<div id="status" class="status icon-smiley"></div>
+			<div id="mines" class="bombs">010</div>
+		</div>
+
+		<canvas id="grid" width="500" height="500" oncontextmenu="return false;">
+			<p>Get a better browser, it doesn't support canvas!</p>
+		</canvas>
+			
+		<noscript>
+			<p>Please enable javascript to play.</p>
+		</noscript>
+		<div class="win-bar" id="winner"></div>
+	
+	</body>
+</html>	
