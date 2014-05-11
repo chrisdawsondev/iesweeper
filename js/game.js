@@ -35,7 +35,10 @@ $(function(){
     mines: $('#mines'),
     status: $('#status'),
     time: $('#timer'),  
-    reset: $('#status')
+    reset: $('#status'),
+    restart: $('#play-again'),
+    end: $('#game-status'),
+    msg: $('#msg')
   };
 
   var tile = function(x,y) {
@@ -75,6 +78,14 @@ $(function(){
         reset();
       }
     }); 
+
+    layout.restart.on({
+      click: function(){
+        reset();
+      }
+    }); 
+
+    layout.end.hide();
 
     createGrid();
     drawGrid();
@@ -123,6 +134,7 @@ $(function(){
     layout.mines.html('010');
     layout.time.html('000');
     layout.status.removeClass('icon-cool icon-angry').addClass('icon-smiley');      
+    layout.end.fadeToggle();
 
     //recreate grid
     createGrid();
@@ -473,7 +485,9 @@ $(function(){
     //stop timer
     window.clearInterval(globals.clock);
     //reveal all mines
-    revealAllMines();   
+    revealAllMines();  
+    layout.end.fadeToggle(); 
+    layout.msg.html('Game Over :(');
   }
 
   function win () {
@@ -493,6 +507,9 @@ $(function(){
     //$("#winner").animate({opacity:1}, 50);
     $("#winner").animate({top: "-=" + settings.height}, 2000);
     $("#winner").animate({opacity:0}, 500);
+
+    layout.end.fadeToggle();
+    layout.msg.html('You Win! :)');
   }
 
   init();

@@ -15,12 +15,13 @@ body {
 	box-sizing: border-box;
 	text-align: center;
 	background:#f9f6f3;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
 }
 
 h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight:400;
 	font-size:2em;
+	font-weight:400;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color:#333;
@@ -109,6 +110,26 @@ h1 {
 	background: -ms-linear-gradient(top,  rgba(0,180,255,0.94) 0%,rgba(0,180,255,0.74) 22%,rgba(0,180,255,0.15) 78%,rgba(0,180,255,0.08) 89%,rgba(255,255,255,0) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(0,180,255,0.94) 0%,rgba(0,180,255,0.74) 22%,rgba(0,180,255,0.15) 78%,rgba(0,180,255,0.08) 89%,rgba(255,255,255,0) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f000b4ff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.message {
+	color: #aaa;
+	font-size: 1.75em;
+	line-height: 2;
+	width:474px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.restart {
+	font-size:0.6em;
+	color:#fff;
+	background-color:seagreen;
+	float: right;
+	width:100px;	
+	margin:15px 0 0 0;
+	text-align: center;	
+	cursor: pointer;
 }
 
 .clearfix:after {
